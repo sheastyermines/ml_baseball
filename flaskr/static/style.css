@@ -1,0 +1,12 @@
+body {
+  background-color: gray;
+}
+
+.body_home {
+  background-color: lightgray;
+  font-size: 1.5em;
+}
+
+.names {
+  font-size: 0.5em;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="home">Baseball Analytics</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="{% block nav_home %}{% endblock %}"><a href="home">Home</a></li>
+      <li class="{% block nav_one %}{% endblock %}"><a href="one_year">Single Season Predictions</a></li>
+      <li class="{% block nav_five %}{% endblock %}"><a href="five_year">Five Year Predictions</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>

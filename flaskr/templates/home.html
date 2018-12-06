@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block nav_home %} active {% endblock %}
+{% block header %}
+  <h1>{% block title %}Welcome!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <br>
+  <div class="body_home">
+    <p> Welcome to our Final Project for Machine Learning! </p>
+    <br>
+    <br>
+    <p>
+      This project uses machine learning with the big data of MLB Statistics to
+      predict how a team will perform by using a couple different approaches.
+    </p>
+
+    <h3> This project was completed by: <h3>
+      <ul class="names">
+        <li>Mark Reifsteck</li>
+        <li>Gerald Villanueva</li>
+        <li>Shea Styer</li>
+      </ul>
+
+  </div>
+{% endblock %}
