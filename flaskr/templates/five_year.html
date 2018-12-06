@@ -5,11 +5,51 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Register">
-  </form>
+  <div class="body_home">
+    <p> The 5 Year Model </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    </p>
+  </div>
+  <br>
+  <div class="body_home">
+    <form method="post">
+      <label class="sr-only" for="inlineFormInputGroup">Team Name</label>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">Team Name</div>
+        <select name="team" class="form-control" aria-label="Team Name" aria-describedby="basic-addon1">
+           <option name="1">1</option>
+           <option name="2">2</option>
+           <option name="3">3</option>
+        </select>
+      </div>
+
+      <label class="sr-only" for="inlineFormInputGroup">Year To Predict</label>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">Year To Predict</div>
+        <select name="team" class="form-control" aria-label="Team Name" aria-describedby="basic-addon1">
+           <option name="1">1</option>
+           <option name="2">3</option>
+           <option name="3">5</option>
+        </select>
+      </div>
+
+      <label class="sr-only" for="inlineFormInputGroup">Num Years To Use</label>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">Num Years To Use</div>
+        <select name="num_years" class="form-control" aria-label="Year" aria-describedby="basic-addon1">
+           <option name="3">1</option>
+           <option name="5">3</option>
+           <option name="7">5</option>
+        </select>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-success">Calculate Wins</button>
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </form>
+  </div>
 {% endblock %}

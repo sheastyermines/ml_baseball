@@ -1,12 +1,14 @@
 body {
   background-color: gray;
+  margin: 2em;
 }
 
 .body_home {
   background-color: lightgray;
-  font-size: 1.5em;
+  padding: 1em;
+  border-radius: 2em;
 }
 
-.names {
-  font-size: 0.5em;
+.icon{
+  height: 100%;
 }

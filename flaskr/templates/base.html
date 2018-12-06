@@ -7,12 +7,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="home">Baseball Analytics</a>
+      <a class="navbar-brand" href="home"><img class="icon" src="https://banner2.kisspng.com/20180406/pwq/kisspng-mlb-2018-major-league-baseball-season-major-league-major-league-baseball-5ac72188b99b18.3202758015229996887603.jpg" alt="MLB Logo"></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="{% block nav_home %}{% endblock %}"><a href="home">Home</a></li>
       <li class="{% block nav_one %}{% endblock %}"><a href="one_year">Single Season Predictions</a></li>
-      <li class="{% block nav_five %}{% endblock %}"><a href="five_year">Five Year Predictions</a></li>
+      <li class="{% block nav_five %}{% endblock %}"><a href="five_year">Multi Year Predictions</a></li>
     </ul>
   </div>
 </nav>
@@ -21,7 +21,14 @@
     {% block header %}{% endblock %}
   </header>
   {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
+  <div class="alert alert-danger alert-dismissible" role="alert" style="margin-top: 10px">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+                             <span aria-hidden="true">
+                                 &times;
+                             </span>
+                         </button>
+                     </div>
   {% endfor %}
   {% block content %}{% endblock %}
 </section>
