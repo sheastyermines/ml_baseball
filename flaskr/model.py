@@ -8,9 +8,9 @@ def run_model(team, year, model="sameYear"):
 
     # Example to read from a file in the saved_models folder
     f=open("flaskr/saved_models/example.txt", "r")
-    print(f.read())
+    # print(f.read())
 
-    
+
     wins = 42
     actual_wins = 24
     return (wins, actual_wins)
