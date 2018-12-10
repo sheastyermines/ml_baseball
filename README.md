@@ -22,7 +22,7 @@
 
     export FLASK_APP=flaskr
     export FLASK_ENV=development
-    flask run
+    flask run --without-threads
 
   6. Navigate to the web page
 

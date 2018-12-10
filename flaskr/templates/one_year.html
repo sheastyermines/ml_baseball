@@ -27,7 +27,7 @@
         <div class="input-group-addon">Team Name</div>
         <select name="team" class="form-control" aria-label="Team Name" aria-describedby="basic-addon1">
           {% for team in teams.keys() %}
-           <option name="{{teams[team]}}">{{team}}</option>
+           <option name="{{teams[team]}}" {% if team_selected is defined and team_selected==team %} selected="selected" {% endif %}>{{team}}</option>
           {% endfor %}
         </select>
       </div>
@@ -37,7 +37,7 @@
         <div class="input-group-addon">Year To Predict</div>
         <select name="year" class="form-control" aria-label="Year" aria-describedby="basic-addon1">
           {% for year in range(2001, 2017) %}
-           <option name="{{year}}">{{year}}</option>
+           <option name="{{year}}" {% if year_selected is defined and year_selected==year %} selected="selected" {% endif %}>{{year}}</option>
           {% endfor %}
         </select>
       </div>

@@ -28,15 +28,20 @@ def one_year_page():
             flash("Data is unavailable for chosen year. Choose a different year.", "error")
             return render_template(
                 'five_year.html',
-                teams=teams
+                teams=teams,
+                team_selected=request.form["team"],
+                year_selected=year,
             )
         if wins > 0:
             flash("Estimated Wins: " + str(wins) + "<br> Actual Wins: " + str(real_wins), "success")
         else:
             flash("Error: Invalid Combination of Attributes", "error")
+
         return render_template(
             'one_year.html',
-            teams=teams
+            teams=teams,
+            team_selected=request.form["team"],
+            year_selected=year,
         )
     else:
         return render_template(
@@ -52,7 +57,6 @@ def five_year_page():
         # num_years: Int
         team_acronym = teams[request.form["team"]]
         year = int(request.form["year"])
-        #num_years = str(request.form["num_years"]) + "_years"
         num_years = int(request.form["num_years"])
         try:
             wins, real_wins = predict(team_acronym, year, num_years)
@@ -61,13 +65,23 @@ def five_year_page():
             flash("Data is unavailable for chosen year. Choose a different year.", "error")
             return render_template(
                 'five_year.html',
-                teams=teams
+                teams=teams,
+                team_selected=request.form["team"],
+                year_selected=year,
+                num_years_selected=num_years,
             )
         if wins > 0:
             flash("Estimated Wins: " + str(wins) + "<br> Actual Wins: " + str(real_wins), "success")
         else:
             flash("Error: Invalid Combination of Attributes", "error")
-        #flash(" Actual Wins: " + str(real_wins))
+
+        return render_template(
+            'five_year.html',
+            teams=teams,
+            team_selected=request.form["team"],
+            year_selected=year,
+            num_years_selected=num_years,
+        )
     return render_template(
         'five_year.html',
         teams=teams
