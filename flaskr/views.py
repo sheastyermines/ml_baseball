@@ -46,7 +46,14 @@ def five_year_page():
         year = int(request.form["year"])
         #num_years = str(request.form["num_years"]) + "_years"
         num_years = int(request.form["num_years"])
-        wins, real_wins = run_model(team_acronym, year, num_years)
+        try:
+            wins, real_wins = run_model(team_acronym, year, num_years)
+        else:
+            flash("Error in running the model. Choose a valid years", "error")
+            return render_template(
+                'five_year.html',
+                teams=teams
+            )
         if wins > 0:
             flash("Estimated Wins: " + str(wins) + "<br> Actual Wins: " + str(real_wins), "success")
         else:
