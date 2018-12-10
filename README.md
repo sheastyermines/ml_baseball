@@ -2,7 +2,7 @@
 
   1. Clone the repo!
 
-    git clone git@github.com:sheastyermines/ml_baseball.git
+    git clone https://github.com/sheastyermines/ml_baseball.git
     cd ml_baseball
 
   2. Create a venv (both 'venvs' are necessary)
