@@ -25,7 +25,7 @@ def one_year_page():
             wins, real_wins = predict(team_acronym, year, 0)
         except Exception as c:
             print(c)
-            flash("Error in running the model. Choose a valid years", "error")
+            flash("Data is unavailable for chosen year. Choose a different year.", "error")
             return render_template(
                 'five_year.html',
                 teams=teams
@@ -58,7 +58,7 @@ def five_year_page():
             wins, real_wins = predict(team_acronym, year, num_years)
         except Exception as c:
             print(c)
-            flash("Error in running the model. Choose a valid years", "error")
+            flash("Data is unavailable for chosen year. Choose a different year.", "error")
             return render_template(
                 'five_year.html',
                 teams=teams
