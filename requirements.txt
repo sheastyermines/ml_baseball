@@ -1,1 +1,7 @@
 Flask>=0.12
+tensorflow
+keras
+sklearn
+matplotlib
+pandas
+numpy
