@@ -23,7 +23,8 @@ def one_year_page():
         year = int(request.form["year"])
         try:
             wins, real_wins = predict(team_acronym, year, 0)
-        else:
+        except Exception as e:
+            print(e)
             flash("Error in running the model. Choose a valid years", "error")
             return render_template(
                 'five_year.html',
@@ -63,7 +64,8 @@ def five_year_page():
             )
         if wins > 0:
             flash("Estimated Wins: " + str(wins) + "<br> Actual Wins: " + str(real_wins), "success")
-        else:
+        except Exception as e:
+            print(e)
             flash("Error: Invalid Combination of Attributes", "error")
         #flash(" Actual Wins: " + str(real_wins))
     return render_template(
