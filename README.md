@@ -5,7 +5,7 @@
     git clone https://github.com/sheastyermines/ml_baseball.git
     cd ml_baseball
 
-  2. Create a venv (both 'venvs' are necessary)
+  2. Create a venv (pip3 if necessary)
 
     sudo pip install virtualenv
     python3 -m venv venv
@@ -14,7 +14,7 @@
 
     . venv/bin/activate
 
-  4. Install the dependencies
+  4. Install the dependencies (pip3 if necessary)
 
     pip install -r requirements.txt
 
