@@ -1,5 +1,9 @@
 # HOW TO RUN THIS APPLICATION
 
+## This project requires Python 3.6 to run
+
+## All code used to train the models can be found in /training
+
   1. Clone the repo!
 
     git clone https://github.com/sheastyermines/ml_baseball.git
@@ -27,3 +31,5 @@
   6. Navigate to the web page
 
     localhost.com:5000/app/home
+
+Any questions or troubleshooting help may be directed to sheastyer@mymail.mines.edu
